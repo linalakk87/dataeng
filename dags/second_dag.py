@@ -131,7 +131,7 @@ def _create_intavolature_query(previous_epoch: int, output_folder: str):
             "title VARCHAR(255),\n"
             "subtitle VARCHAR(255),\n"
             "key VARCHAR(255),\n"
-            "difficulty VARCHAR(255),\n"
+            "difficulty VAR CHAR(255),\n"
             "date VARCHAR(255),\n"
             "ensemble VARCHAR(255));\n"
         )
