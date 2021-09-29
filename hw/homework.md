@@ -11,7 +11,19 @@ Seeing that creating characters was a chore, she thought that it'd be a good ide
 After thinking it through, she came down to this spec:
 
 - The generated characters should be simple, and of low level(up to including 3)
-- The process should happen once a week, before friday evening's sessions
+- The process should happen once a week, before friday evening's sessions 
+
+
+default_args_dict = {
+    'start_date': datetime.datetime(2021, 6, 25, 0, 0, 0),
+    'concurrency': 1,
+    'schedule_interval': "0 17 * * 5",
+    'retries': 1,
+    'retry_delay': datetime.timedelta(minutes=5),
+}
+
+
+
 - The characters should be added to a single table, on the airflow table at the given postgres database, with the following format(everything is varchar).
 
 1. name*
